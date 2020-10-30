@@ -1,0 +1,25 @@
+  
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="xxx">
+  <div class="box1">
+    <a href="#"><img src="/media/{{object.mainimage}}" style="width:500px;"></a>
+  </div>
+  
+  <div class="box2">
+     <h3 class="title mp-3">{{object.name}}</h3>
+      <p>
+        <span>
+          <span class="currency">BDT &#2547;</span><span class="num">{{object.price}}</span>
+         </span>
+          </p>
+        <dl class="item-property">
+          <dt>Description</dt>
+          <dd>
+           <p>{{object.detail_text|linebreaks}}</p>
+          </dd>
+          </dl>
+        <a href="{% url 'App_Order:add' pk=object.pk %}" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to Cart</a>
+  </div>
+</div>  
+{% endblock %}

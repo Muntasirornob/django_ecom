@@ -1,0 +1,13 @@
+.xxx{
+  display: flex;
+  flex-wrap: wrap;
+  }
+.xxx div {
+ border: 1px solid white;
+    }
+.box1{
+ flex:3;
+  }
+.box2{
+  flex:1;
+  }
